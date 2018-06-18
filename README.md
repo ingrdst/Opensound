@@ -12,6 +12,7 @@ Database open source colaborativa. O Aplicativo Web oferece opção de pesquisar
 
 ## Execução no Terminal
 
+* instalações (ruby/rails/rvm/rbenv)
 * cd ~ (pasta 'home')
 * cd opensound -> WebApp (pasta do projeto)
 * bundle install (instala gems)
