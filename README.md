@@ -14,7 +14,7 @@ Database open source colaborativa. O Aplicativo Web oferece opção de pesquisar
 
 * cd ~ (pasta 'home')
 * cd opensound -> WebApp (pasta do projeto)
-* gem install bundler (instala gems)
+* bundle install (instala gems)
 * rake db:migrate (gera tabela do banco)
 * rails s (inicializa server)
 * ctrl+c (finaliza server)
