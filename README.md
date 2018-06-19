@@ -10,11 +10,16 @@ Database open source colaborativa. O Aplicativo Web oferece opção de pesquisar
     $ git clone https://gitlab.com/ingrdst/opensound.git
 ```
 
+## Pré-Requisitos
+
+* ruby
+* ruby on rails
+* rvm/rbenv
+
 ## Execução no Terminal
 
-* instalações (ruby/rails/rvm/rbenv)
 * cd ~ (pasta 'home')
-* cd opensound -> WebApp (pasta do projeto)
+* cd opensound -> project (pasta do projeto)
 * bundle install (instala gems)
 * rake db:migrate (gera tabela do banco)
 * rails s (inicializa server)
