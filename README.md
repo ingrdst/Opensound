@@ -2,7 +2,7 @@
 
 ## Funcionamento
 
-Database open source colaborativa. O Aplicativo Web oferece opção de pesquisar, fazer upload e download de sons de diversos formatos.
+Database open source colaborativa. Por meio do cadastro de usuário, o Aplicativo Web oferece opção de pesquisar, fazer upload e download de sons de diversos formatos.
 
 ## Git Clone
 
