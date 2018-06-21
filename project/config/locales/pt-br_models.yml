@@ -1,0 +1,11 @@
+"pt-BR":
+  activerecord:
+  models:
+  customer: User
+  attributes:
+  customer:
+  id: "ID"
+  username: "Usuário"
+  email: "Email"
+  password: "Senha"
+  created_at: "Criado em"
