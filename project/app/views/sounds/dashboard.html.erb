@@ -26,10 +26,10 @@
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li class="current">Sounds</li>
-        <li><%= link_to "New Sound", sound_registration_path%></li>
+        <li><%= link_to "Dashboard", authenticated_root_path(current_sound) %></li>
+        <li><%= link_to "New Track", new_sound_registration_path%></li>
         <li><%= link_to "Account Settings", edit_sound_registration_path %></li>
-        <li><%= link_to "View Sounds", sounds_path(current_sound) %></li>
+        <li><%= link_to "View Sounds", sounds_path %></li>
         
       </ul>
     </div>

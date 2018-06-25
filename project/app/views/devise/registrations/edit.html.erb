@@ -1,6 +1,6 @@
   <div id="sound_show">
 	  <div id="show_banner">
-	    <h1>Edit and update sounds.</h1>
+	    <h1>Edit and update sound.</h1>
     </div>
 
   <div id="sound_show">
@@ -13,8 +13,9 @@
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li><%= link_to "Account Settings", edit_sound_registration_path, class: "current" %></li>
-        <li><%= link_to "View Sounds", sounds_path(current_sound) %></li>
+        <li><%= link_to "Account Settings", edit_sound_registration_path(current_sound), class: "current" %></li>
+        <li><%= link_to "View Sounds", sounds_path %></li>
+        <li><%= link_to "Back", authenticated_root_path %></li>
       </ul>
     </div>
   </div>
