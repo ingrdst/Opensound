@@ -1,34 +1,25 @@
-  
-    <div id="sound_show">
+<div id="sound_show">
 	<div id="show_banner">
-	    <h1>Find out your new fav sound.</h1>
-    </div>
-  
-	<div id="links">
-    <div class="wrapper_skinny">
-      <ul>
-        <li><%= link_to "Dashboard", authenticated_root_path(current_sound) %></li>
-        <li><%= link_to "New Track", sound_registration_path%></li>
-        <li><%= link_to "Account Settings", edit_sound_registration_path %></li>
-        <li><%= link_to "View Sounds", sounds_path %></li>
-        
-      </ul>
-    </div>
-  </div>
-  
+	<h1>Find out your new fav sound.</h1>
+	</div>
+
+
+
 	<div id="sounds" class="cf">
 	<div class="wrapper">
 		<ul class="cf">
 			<% @sounds.each do |sound| %>
-				<%= link_to sounds_path do %>
+				<%= link_to sound do %>
 					<li>
 						<div class="sound_overview">
-							<h2><%= sound.title %>Track Name</h2>
+							<h2><%= sound.title %></h2>
+							<p class="track_count"> Tracks Uploaded. </p>
 						</div>
 					</li>
 				<% end %>
 			<% end %>
 		</ul>
-	</div>
+
+		</div>
 	</div>
 </div>

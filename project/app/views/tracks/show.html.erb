@@ -3,19 +3,32 @@
 		<div class="wrapper_skinny">
 			<h1><%= @sound.title %></h1>
 			<p class="description"><%= @sound.description %></p>
+		</div>
 	</div>
 
 	<div id="breadcrumb">
 		<%= link_to sounds_path do %>
-			All Sounds
+			All sounds
 			<span>/</span>
-			<%= @sound.title %>
+			<%= link_to @sound.title, sound_path(@sound) %>
+			<span>/</span>
+			<%= @track.title %>
 		<% end %>
 	</div>
 
-	<div id="tracks">
+
+    <h3>Last upload.</h3>
+	<div id="track_content">
 		<div class="wrapper_skinny">
-			<ul class="cf">
+			<h4>Track Name: <%= @track.title %> </h4>
+			<p class="description">Description: <%= @track.description %> </p>
+        </div>
+    </div>
+      
+    <h3>Older uploads.</h3>
+    <div id="tracks">
+    <div class="wrapper_skinny">
+        <ul class="cf">
 				<% @tracks.each do |track| %>
 					<li class="cf">
 						<div class="track_overview">
@@ -25,7 +38,8 @@
 					</li>
 				<% end %>
 			</ul>
-
 		</div>
 	</div>
-</div>
+</div>        
+    
+
