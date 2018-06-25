@@ -1,0 +1,19 @@
+<div id="banner" class="sounds_banner">
+	<h1>Discover your new favorite sound.</h1>
+</div>
+
+<div id="sounds" class="cf">
+	<div class="wrapper">
+		<ul class="cf">
+			<% @sounds.each do |sound| %>
+				<%= link_to sounds_path do %>
+					<li>
+						<div class="sound_overview">
+							<h2><%= sound.title %>Title</h2>
+						</div>
+					</li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+</div>
