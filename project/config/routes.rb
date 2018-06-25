@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :sounds
+  root 'welcome#index'
 
-  root 'start#index'
-  
-  resources :users
-
-  get 'opensound' => 'start#index'
-  
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
