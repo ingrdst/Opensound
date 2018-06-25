@@ -6,7 +6,7 @@
 				<% unless sound_signed_in? %>
 					<li><%= link_to "Explore", sound_session_path %></li>
 					<li><%= link_to "Sign In", new_sound_session_path %></li>
-					<li><%= link_to "Create a Sound", new_sound_registration_path %></li>
+					<li><%= link_to "Share a Sound", new_sound_registration_path %></li>
 				<% else %>
 					<li><%= link_to "Dashboard", root_path %></li>
 					<li><%= link_to "Explore", sound_session_path %></li>
