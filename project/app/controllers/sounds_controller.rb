@@ -8,11 +8,18 @@ class SoundsController < ApplicationController
     def show
 	end
 
+	def dashboard
+	end
 
 	private 
 
 	def find_sound
-		@sound = Sound.find(params[:id])
+		if params[:id].nil? 
+			@sound = current_sound
+		else
+			@sound = Sound.find(params[:id])
+		end 	
+			
 	end
 
 end
