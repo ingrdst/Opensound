@@ -9,26 +9,32 @@
       <ul>
         <li><%= link_to "Dashboard", authenticated_root_path %></li>
         <li><%= link_to "New Track", new_sound_track_path(@sound)  %></li>
-        <li><%= link_to "Account Settings", edit_sound_registration_path %></li>
+        <li><%= link_to "Edit Track", edit_sound_registration_path %></li>
         <li><%= link_to "View Sounds", sounds_path %></li>
         
       </ul>
     </div>
   </div>
 
-<%= form_for ([@sound, @track]) do |f| %>
-    <%= f.label :title %>
-    <br>
-    <%= f.text_field :title %>
+	<div id="posts">
+    <div class="wrapper_skinny">
+        <%= form_for ([@sound, @track]) do |f| %>
+        <%= f.label :title %>
+        <br>
+        <%= f.text_field :title %>
 
-    <br><br>
+        <br><br>
 
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
 
-    <br><br>
+        <br><br>
 
-    <%= f.submit %>
+        <div class="actions">
+        <%= f.submit "Create Track", class: "button button_highlight button_block" %>
+        </div>
 
-<% end %>
+        <% end %>
+    </div>
+    </div>
 </div>

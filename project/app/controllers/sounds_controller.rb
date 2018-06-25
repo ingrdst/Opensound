@@ -7,8 +7,6 @@ class SoundsController < ApplicationController
 	end
 
 	def show
-		@sound = Sound.find(params[:id])
-		@tracks = Track.where(sound_id: @sound).order("created_at DESC")
 	end
 
 	def dashboard
@@ -17,7 +15,7 @@ class SoundsController < ApplicationController
 	private
 
 	def find_track
-		#@tracks = Track.where(sound_id: @sound).order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
+		@tracks = Track.where(sound_id: @sound).order("created_at DESC")
 	end
 
 	def find_sound

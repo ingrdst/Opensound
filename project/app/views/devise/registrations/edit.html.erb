@@ -13,9 +13,10 @@
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li><%= link_to "Account Settings", edit_sound_registration_path(current_sound), class: "current" %></li>
-        <li><%= link_to "View Sounds", sounds_path %></li>
-        <li><%= link_to "Back", authenticated_root_path %></li>
+        <li><%= link_to "Dashboard", authenticated_root_path(current_sound) %></li>
+        <li><%= link_to "New Track", new_sound_track_path(@sound)  %></li>
+        <li><%= link_to "Account Settings", edit_sound_registration_path(current_sound) %></li>
+				<li><a href="http://localhost:3000/sounds/1">View Sounds</a></li>
       </ul>
     </div>
   </div>
