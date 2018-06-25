@@ -10,16 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_25_080153) do
-
-  create_table "packs", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.integer "sound_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["sound_id"], name: "index_packs_on_sound_id"
-  end
+ActiveRecord::Schema.define(version: 2018_06_25_055134) do
 
   create_table "sounds", force: :cascade do |t|
     t.string "email", default: "", null: false
