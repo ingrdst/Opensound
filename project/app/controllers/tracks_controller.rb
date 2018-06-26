@@ -20,7 +20,6 @@ class TracksController < ApplicationController
     end
 
     def edit
-    
     end
     
     def update
@@ -33,7 +32,7 @@ class TracksController < ApplicationController
 
     def destroy
 		@track.destroy
-		redirect_to sounds_path
+        redirect_to sounds_path
 	end
 
     private 
