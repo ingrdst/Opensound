@@ -18,17 +18,18 @@
 
 	<div id="sounds" class="cf">
 	<div class="wrapper">
-		<ul class="cf">
+		<ul class="cf"><li>
 			<% @sounds.each do |sound| %>
 				<%= link_to sound do %>
 					<li>
 						<div class="sound_overview">
 							<h2><%= sound.title %></h2>
-							<p class="track_count"> All Tracks Uploaded. </p>
+							<p class="track_count"> User Tracks Uploaded. </p>
 						</div>
 					</li>
 				<% end %>
 			<% end %>
+			</li>
 		</ul>
 
 		</div>

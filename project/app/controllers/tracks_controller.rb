@@ -1,4 +1,5 @@
 class TracksController < ApplicationController
+    before_action :authenticate_sound!, except: [:show]
     before_action :find_sound
     before_action :find_track, only: [:show, :edit, :update, :destroy]
     
@@ -48,5 +49,13 @@ class TracksController < ApplicationController
     def find_track 
         @track = Track.find(params[:id])
     end
+
+    def require_permission
+        @sound = Sound.find(params[:sound_id])
+        if current_sound != @sound
+            redirect_to root_path, notice: "Sorry, you're not allowed to visite this page!"
+        end
+    end
+
 end
 
