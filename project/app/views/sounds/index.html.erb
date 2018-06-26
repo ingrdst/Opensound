@@ -3,6 +3,17 @@
 	<h1>Find out your new fav sound.</h1>
 	</div>
 
+  <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to "Dashboard", authenticated_root_path(current_sound) %></li>
+        <li>New Track</li>
+        <li><%= link_to "Account Settings", edit_sound_registration_path(current_sound) %></li>
+				<li><a href="http://localhost:3000/sounds">View Sounds</a></li>
+      </ul>
+    </div>
+  </div>
+
 
 
 	<div id="sounds" class="cf">
@@ -13,7 +24,7 @@
 					<li>
 						<div class="sound_overview">
 							<h2><%= sound.title %></h2>
-							<p class="track_count"> Tracks Uploaded. </p>
+							<p class="track_count"> All Tracks Uploaded. </p>
 						</div>
 					</li>
 				<% end %>

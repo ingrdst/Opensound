@@ -4,15 +4,9 @@
       <%= link_to "OpenSound", root_path, id: "logo" %>
       <nav>
         <ul>
-          <% unless sound_signed_in? %>
             <li><%= link_to "Explore", new_sound_session_path %></li>
             <li><%= link_to "Sign In", new_sound_session_path %></li>
             <li><%= link_to "Share a Sound", new_sound_registration_path %></li>
-          <% else %>
-            <li><a href="#">Dashboard</a></li>
-            <li><%= link_to "Explore", sounds_path %></li>
-            <li><%= link_to "Sign Out", destroy_sound_session_path, method: :delete %></li>
-          <% end %>
         </ul>
       </nav>
     </div>

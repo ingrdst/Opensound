@@ -1,5 +1,7 @@
 <div id="sound_show">
 	<div id="show_banner">
+	    <h1>OpenSound All Tracks.</h1>
+    </div>
 		<div class="wrapper_skinny">
 			<h1><%= @sound.title %></h1>
 			<p class="description"><%= @sound.description %></p>
@@ -8,7 +10,7 @@
 
 	<div id="breadcrumb">
 		<%= link_to sounds_path do %>
-			All sounds
+			All Sounds
 			<span>/</span>
 			<%= link_to @sound.title, sound_path(@sound) %>
 			<span>/</span>

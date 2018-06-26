@@ -3,7 +3,8 @@
 		<div class="wrapper_skinny">
 			<h1><%= @sound.title %></h1>
 			<p class="description"><%= @sound.description %></p>
-	</div>
+		</div>
+	
 
 	<div id="breadcrumb">
 		<%= link_to sounds_path do %>
@@ -12,7 +13,7 @@
 			<%= @sound.title %>
 		<% end %>
 	</div>
-
+	</div>
 	<div id="tracks">
     <div class="wrapper_skinny">
       <ul class="cf">
@@ -22,9 +23,10 @@
               <h2><%= link_to track.title, sound_track_path(@sound, track) %></h2>
               <p class="description"><%= truncate(track.description, lenght: 160) %></p>
               <div class="authorized_links">
-                <%= link_to "Edit", edit_sound_registration_path(@sound, track) %>
+                <%= link_to "Edit", edit_sound_track_path(@sound, track) %>
                 <%= link_to "Delete", sound_track_path(@sound, track), method: :delete, data: {confirm: "Are you sure?"} %>
               </div>
+              
             </div>
           </li>
         <% end %>

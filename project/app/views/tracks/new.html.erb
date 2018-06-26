@@ -18,23 +18,7 @@
 
 	<div id="posts">
     <div class="wrapper_skinny">
-        <%= form_for ([@sound, @track]) do |f| %>
-        <%= f.label :title %>
-        <br>
-        <%= f.text_field :title %>
-
-        <br><br>
-
-        <%= f.label :description %>
-        <%= f.text_area :description %>
-
-        <br><br>
-
-        <div class="actions">
-        <%= f.submit "Create Track", class: "button button_highlight button_block" %>
-        </div>
-
-        <% end %>
+    <%= render 'form' %> 
     </div>
     </div>
 </div>

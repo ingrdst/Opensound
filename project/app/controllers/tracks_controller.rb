@@ -1,6 +1,6 @@
 class TracksController < ApplicationController
     before_action :find_sound
-    before_action :find_track, only: [:show]
+    before_action :find_track, only: [:show, :edit, :update, :destroy]
     
     def new
         @track = @sound.tracks.new
@@ -19,6 +19,23 @@ class TracksController < ApplicationController
         @tracks = Track.where(sound_id: @sound).order("created_at DESC").reject { |e| e.id == @track.id }
     end
 
+    def edit
+    
+    end
+    
+    def update
+        if @track.update track_params
+            redirect_to sound_track_path(@sound, @track, notice: "Track was successfuly updated!")
+        else
+            render 'edit'
+        end
+    end
+
+    def destroy
+		@track.destroy
+		redirect_to sounds_path
+	end
+
     private 
 
     def track_params
@@ -33,3 +50,4 @@ class TracksController < ApplicationController
         @track = Track.find(params[:id])
     end
 end
+
