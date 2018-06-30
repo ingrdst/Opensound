@@ -3,11 +3,13 @@
 		<%= link_to "OpenSound", root_path, id: "logo" %>
 		<nav>
 			<ul>
+	
 				<% unless sound_signed_in? %>
 					<li><%= link_to "Explore", sound_session_path %></li>
 					<li><%= link_to "Sign In", new_sound_session_path %></li>
 					<li><%= link_to "Share a Sound", new_sound_registration_path %></li>
 				<% else %>
+				<li><%= link_to "Upload New Track!", new_sound_track_path(@sound)  %></li>
 					<li><%= link_to "Dashboard", root_path %></li>
 					<li><%= link_to "Explore",sounds_path %></li>
 					<li><%= link_to "Sign Out", destroy_sound_session_path, method: :delete %></li>
@@ -17,17 +19,16 @@
 	</div>
 </header>
 
-    
+   
   <div id="sound_show">
 	<div id="show_banner">
-	    <h1>OpenSound user dashboard.</h1>
+	    <h1>User dashboard.</h1>
     </div>
   
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li><%= link_to "Dashboard", authenticated_root_path(current_sound) %></li>
-        <li><%= link_to "New Track", new_sound_track_path(@sound)  %></li>
+        <li><%= link_to 'Posts', posts_path(current_sound) %></li>
         <li><%= link_to "Account Settings", edit_sound_registration_path %></li>
 				<li><%= link_to "View Sounds",sounds_path %></li>
 
@@ -39,11 +40,33 @@
     <div class="wrapper_skinny">
       <ul>
 			<h3> OpenSound </h3>
-			version 0.1.2
+			version 1.2
 
-			<li><p>Updates from developers</p></li>
 			<li><p>Terms of use</p></li>
-			<li><p>Help</p></li>
+      
+			General use of the website<br>
+			Use of this website and corresponding services by any user (“you” or User”) entails full acceptance 
+			of these terms and any specific conditions published on the website. Accordingly, users are recommended 
+			to read carefully these terms and conditions and any instructions shown on the website each time they 
+			access the site.	By accessing the site, you agree to these terms.
+			We reserve the right to modify or delete at any time and without notice any content, services and 
+			information that are published in this website, as well as limit or modify these terms and conditions. 
+			Any modification will take effect as from the date of publishing and will bind any user accessing the 
+			page subsequent to publication. These terms may be saved and printed by the user using the "Print" 
+			function of the browser.
+
+			<li><p>About</p></li>
+			Licenses<br>
+			<br>What do I need to do to legally use the files on opensound?
+			<br>How do I credit/attribute?<br>
+
+			Account<br>
+			<br>I want to reset my password! Where should I go?
+			<br>How do I delete my account?<br>
+
+			Sounds<br>
+			<br>How do I delete a sound?
+			<br>What are the sound format supported
 			</ul>
 		</div>
 	</div>

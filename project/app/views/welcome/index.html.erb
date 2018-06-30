@@ -4,7 +4,7 @@
       <%= link_to "OpenSound", root_path, id: "logo" %>
       <nav>
         <ul>
-            <li><%= link_to "Explore", new_sound_session_path %></li>
+            <li><%= link_to "Explore", sounds_path %></li>
             <li><%= link_to "Sign In", new_sound_session_path %></li>
             <li><%= link_to "Share a Sound", new_sound_registration_path %></li>
         </ul>
@@ -14,7 +14,7 @@
   <div class="wrapper_skinny">
     <h1>Discover and share sounds.</span></h1>
     <%= link_to "Share a sound", new_sound_registration_path, class: "button button_highlight" %>
-    <%= link_to "Explore", new_sound_session_path, class: "button button_white" %>
+    <%= link_to "Explore", sounds_path, class: "button button_white" %>
   </div>
 </div>
 

@@ -57,5 +57,14 @@ class TracksController < ApplicationController
         end
     end
 
+    def index
+        @tracks = Tracks.all
+        if params[:search]
+          @tracks = Tracks.search(params[:search]).order("created_at DESC")
+        else
+          @tracks = Tracks.all.order("created_at DESC")
+        end
+      end
+
 end
 

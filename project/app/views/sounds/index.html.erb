@@ -6,25 +6,36 @@
   <div id="links">
     <div class="wrapper_skinny">
       <ul>
-        <li><%= link_to "Dashboard", authenticated_root_path(current_sound) %></li>
-        <li>New Track</li>
-        <li><%= link_to "Account Settings", edit_sound_registration_path(current_sound) %></li>
-				<li><a href="http://localhost:3000/sounds">View Sounds</a></li>
+        <li><%= link_to 'Posts', posts_path(current_sound) %></li>
+				<li><%= link_to "Account Settings", edit_sound_registration_path(current_sound) %></li>
+				<li><%= link_to "View Sounds",sounds_path %></li>
       </ul>
     </div>
   </div>
 
 
 
-	<div id="sounds" class="cf">
+<div id="sounds" class="cf">
 	<div class="wrapper">
+
+<%= form_tag(sounds_path, :method => "get", id: "search-form") do %>
+    <%= text_field_tag :search, params[:search], placeholder: "Search Tracks" %>
+    <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @tracks.blank? %>
+  <h4>There are no tracks containing the term <%= params[:search] %> .</h4>
+<% end %>
+
+<br>
+<h3>Latest User Accounts created.</h3>
 		<ul class="cf"><li>
 			<% @sounds.each do |sound| %>
 				<%= link_to sound do %>
 					<li>
 						<div class="sound_overview">
 							<h2><%= sound.title %></h2>
-							<p class="track_count"> User Tracks Uploaded. </p>
+							<p class="track_count"> User Tracks. </p>
 						</div>
 					</li>
 				<% end %>

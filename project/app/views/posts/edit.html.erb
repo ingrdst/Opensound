@@ -1,0 +1,23 @@
+  <div id="sound_show">
+	<div id="show_banner">
+	    <h1>Editing Post.</h1>
+    </div>
+  
+    <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to 'Posts', posts_path(current_sound) %></li>
+        <li><%= link_to "Account Settings", edit_sound_registration_path %></li>
+				<li><%= link_to "View Sounds",sounds_path %></li>
+
+      </ul>
+    </div>
+  </div>
+  
+  <div id="links">
+    <div class="wrapper_skinny">
+
+<%= render 'form', post: @post %>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>

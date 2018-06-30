@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   devise_for :sounds
 
   resources :sounds, only: [:index, :show] do
