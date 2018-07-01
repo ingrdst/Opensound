@@ -14,28 +14,55 @@
   </div>
 
 
-
 <div id="sounds" class="cf">
 	<div class="wrapper">
 
-<%= form_tag(sounds_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Tracks" %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
+			<h3> OpenSound </h3>
+			version 1.0.3 (Beta!)
 
-<% if @tracks.blank? %>
-  <h4>No tracks containing: <%= params[:search] %> .</h4>
-<% end %>
+			<li><p>Terms of use</p></li>
+      
+			General use of the website<br>
+			Use of this website and corresponding services by any user entails full acceptance 
+			of these terms and any specific conditions published on the website. Accordingly, users are recommended 
+			to read carefully these terms and conditions and any instructions shown on the website each time they 
+			access the site.	By accessing the site, you agree to these terms.
+			We reserve the right to modify or delete at any time and without notice any content, services and 
+			information that are published in this website, as well as limit or modify these terms and conditions. 
 
-<br>
-<h3>Latest User Accounts Created.</h3>
+			<li><p>About</p></li>
+			Licenses<br>
+			<br>What do I need to do to legally use the files on opensound?
+			<br>How do I credit/attribute?<br>
+
+			Account<br>
+			<br>I want to reset my password! Where should I go?
+			<br>How do I delete my account?<br>
+
+			Sounds<br>
+			<br>How do I delete a sound?
+			<br>What are the sound format supported?
+
+			<h3> Search Tracks </h3>
+
+			<%= form_tag(sounds_path, :method => "get", id: "search-form") do %>
+   		 <%= text_field_tag :search, params[:search], placeholder: "Tracks Tags (Eg.: Name, Genre)" %>
+    	 <%= submit_tag "Search", :name => nil %>
+			<% end %>
+
+			<% if @tracks.blank? %>
+  		<h4>No tracks containing: <%= params[:search] %> .</h4>
+			<% end %>
+
+	<br>
+	<h3>Latest User Accounts Created.</h3>
 		<ul class="cf"><li>
 			<% @sounds.each do |sound| %>
 				<%= link_to sound do %>
 					<li>
 						<div class="sound_overview">
 							<h2><%= sound.title %></h2>
-							<p class="track_count"> User Tracks. </p>
+							<p class="track_count"> Latest Created Account. </p>
 						</div>
 					</li>
 				<% end %>
@@ -43,6 +70,5 @@
 			</li>
 		</ul>
 
-		</div>
 	</div>
 </div>

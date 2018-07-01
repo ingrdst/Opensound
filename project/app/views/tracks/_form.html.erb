@@ -1,5 +1,11 @@
 <%= form_for ([@sound, @track]) do |f| %>
-        <%= f.label :title %>
+        
+        <div class="field">
+	<%= f.label :sound_file %><br>
+	<%= f.file_field :mp3 %>
+	</div>
+        
+        <%= f.label :track_name %>
         <br>
         <%= f.text_field :title %>
 
@@ -9,6 +15,13 @@
         <%= f.text_area :description %>
 
         <br><br>
+
+        <div class="field">
+	<%= f.label :track_thumbnail %><br>
+	<%= f.file_field :track_thumbnail %>
+	</div>
+
+
 
         <div class="actions">
         <%= f.submit "Submit", class: "button button_highlight button_block" %>

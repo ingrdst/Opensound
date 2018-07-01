@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_30_025255) do
+ActiveRecord::Schema.define(version: 2018_07_01_210312) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -38,6 +38,10 @@ ActiveRecord::Schema.define(version: 2018_06_30_025255) do
     t.string "title"
     t.text "description"
     t.boolean "admin", default: false
+    t.string "thumbnail_file_name"
+    t.string "thumbnail_content_type"
+    t.integer "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
     t.index ["email"], name: "index_sounds_on_email", unique: true
     t.index ["reset_password_token"], name: "index_sounds_on_reset_password_token", unique: true
   end
@@ -48,6 +52,10 @@ ActiveRecord::Schema.define(version: 2018_06_30_025255) do
     t.integer "sound_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "track_thumbnail_file_name"
+    t.string "track_thumbnail_content_type"
+    t.integer "track_thumbnail_file_size"
+    t.datetime "track_thumbnail_updated_at"
     t.index ["sound_id"], name: "index_tracks_on_sound_id"
   end
 

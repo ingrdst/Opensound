@@ -1,29 +1,24 @@
 <div id="sound_show">
 	<div id="show_banner">
-	    <h1>OpenSound All Tracks.</h1>
-    </div>
-		<div class="wrapper_skinny">
-			<h1><%= @sound.title %></h1>
-			<p class="description"><%= @sound.description %></p>
-		</div>
+	<h1>Tracks Uploaded.</h1>
 	</div>
 
-	<div id="breadcrumb">
-		<%= link_to sounds_path do %>
-			All Sounds
-			<span>/</span>
-			<%= link_to @sound.title, sound_path(@sound) %>
-			<span>/</span>
-			<%= @track.title %>
-		<% end %>
-	</div>
+  <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to 'Posts', posts_path(current_sound) %></li>
+				<li><%= link_to "Account Settings", edit_sound_registration_path(current_sound) %></li>
+				<li><%= link_to "View Sounds",sounds_path %></li>
+      </ul>
+
 
 
     <h3>Last upload.</h3>
 	<div id="track_content">
 		<div class="wrapper_skinny">
+		<%= image_tag @track.track_thumbnail.url(:medium), class: "current_track_thumbnail" %>
 			<h4>Track Name: <%= @track.title %> </h4>
-			<p class="description">Description: <%= @track.description %> </p>
+			Description: <%= @track.description %> 
         </div>
     </div>
       
@@ -33,9 +28,12 @@
         <ul class="cf">
 				<% @tracks.each do |track| %>
 					<li class="cf">
+					<div class="track_thumbnail">
+								<%= image_tag track.track_thumbnail.url(:medium) %>
+						</div>
 						<div class="track_overview">
 							<h2><%= link_to track.title, sound_track_path(@sound, track) %></h2>
-							<p class="description"><%= truncate(track.description, length: 160) %></p>
+							<p class="description"><%= truncate(track.description, length: 180) %></p>
 						</div>
 					</li>
 				<% end %>
