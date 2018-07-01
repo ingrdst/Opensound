@@ -24,11 +24,11 @@
 <% end %>
 
 <% if @tracks.blank? %>
-  <h4>There are no tracks containing the term <%= params[:search] %> .</h4>
+  <h4>No tracks containing: <%= params[:search] %> .</h4>
 <% end %>
 
 <br>
-<h3>Latest User Accounts created.</h3>
+<h3>Latest User Accounts Created.</h3>
 		<ul class="cf"><li>
 			<% @sounds.each do |sound| %>
 				<%= link_to sound do %>
