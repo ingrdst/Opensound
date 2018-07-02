@@ -1,6 +1,6 @@
 $white: #FFFFFF;
 $highlight: #000000;
-$dark: #2C3135;
+$dark: #000000;
 $light: #EDEFF5;
 
 * {
@@ -39,6 +39,22 @@ body {
 
 .cf:after {
   clear: both;
+}
+
+#notice_wrapper {
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
+  text-shadow:5px 5px 5px #000000;
+  z-index: 999;
+  p {
+    color: $white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    padding: 1.5rem 0;
+  }
 }
 
 .button {

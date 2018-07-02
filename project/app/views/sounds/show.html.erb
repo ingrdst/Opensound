@@ -1,19 +1,19 @@
 <div id="sound_show">
 	<div id="show_banner">
-		<div class="wrapper_skinny">
-			<h1><%= @sound.title %></h1>
-			<p class="description"><%= @sound.description %></p>
-		</div>
-	
+  	    <h1>All Tracks.</h1>
 
-	<div id="breadcrumb">
-		<%= link_to sounds_path do %>
-			All Tracks
-			<span>/</span>
-			<%= @sound.title %>
-		<% end %>
-	</div>
-	</div>
+    </div>
+  
+  <div id="links">
+    <div class="wrapper_skinny">
+      <ul>
+        <li><%= link_to 'Posts', posts_path(current_sound) %></li>
+        <li><%= link_to "Account Settings", edit_sound_registration_path %></li>
+				<li><%= link_to "View Sounds",sounds_path %></li>
+
+      </ul>
+    </div>
+  </div>
 
 	<div id="tracks">
     <div class="wrapper_skinny">
@@ -38,3 +38,5 @@
         <% end %>
       </ul>
 </div>
+
+<%= will_paginate @tracks, previous_label: "Previous", next_label: "Next" %>

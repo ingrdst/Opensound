@@ -39,7 +39,7 @@ class TracksController < ApplicationController
     private 
 
     def track_params
-        params.require(:track).permit(:title, :description, :track_thumbnail)
+        params.require(:track).permit(:title, :description, :track_thumbnail, :audio)
     end
 
     def find_sound 

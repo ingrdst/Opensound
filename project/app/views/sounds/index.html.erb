@@ -43,6 +43,7 @@
 			<br>How do I delete a sound?
 			<br>What are the sound format supported?
 
+
 			<h3> Search Tracks </h3>
 
 			<%= form_tag(sounds_path, :method => "get", id: "search-form") do %>
@@ -69,6 +70,7 @@
 			<% end %>
 			</li>
 		</ul>
+		<%= will_paginate @sounds, previous_label: "Previous", next_label: "Next" %>
 
 	</div>
 </div>
