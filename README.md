@@ -1,4 +1,4 @@
-# OpenSound- Orientação a Objetos (Ruby on Rails)
+# OpenSound (Ruby on Rails)
 
 ## Funcionamento
 
@@ -7,7 +7,7 @@ Database open-source colaborativa de sons. As interfaces são distintas para vis
 ## Git Clone
 
 ```
-    $ git clone https://gitlab.com/ingrdst/opensound.git
+    $ git clone https://github.com/ingrdst/opensound.git
 ```
 
 ## Pré-Requisitos
@@ -24,8 +24,3 @@ Database open-source colaborativa de sons. As interfaces são distintas para vis
 * rake db:migrate (gera tabela do banco)
 * rails s (inicializa server)
 * ctrl+c (finaliza server)
-
-## Developers
-
-* Ingrid C. G. S. Soares [Matrícula: 16/0125162]
-* Alan Ronison de Lima e Silva [Matrícula: 16/0109256]
