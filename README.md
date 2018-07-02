@@ -2,7 +2,7 @@
 
 ## Funcionamento
 
-Database open source colaborativa. Por meio do cadastro de usuário, o Aplicativo Web oferece opção de pesquisar, fazer upload e download de sons de diversos formatos.
+Database open-source colaborativa de sons. As interfaces são distintas para visitante regular, usuário e developer. O visitante regular tem acesso somente à página inicial e pode explorar sons. O usuário cadastrado pode, além disso, fazer upload de sons e ter acesso às postagens privadas de teste (beta!) do aplicativo. Já o admin tem acesso aos outros usuários e à versão (omega!) de teste, podendo também criar, editar e deletar postagens de versões da página com os updates.
 
 ## Git Clone
 
