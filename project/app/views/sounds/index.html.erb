@@ -18,9 +18,19 @@
 	<div class="wrapper">
 
 			<h3> OpenSound </h3>
-			version 1.0.2 (Beta!)
 
-			<br><br>
+            <h4>Check Available Authenticated Versions:</h4>
+            <ul>
+			<li>Version 1.0.1</li>
+            <% if current_sound %>
+            <li>Version 1.0.2 (Beta!)</li>
+            <% end %>
+            <% if current_sound && current_sound.admin %>
+            <li>Version 1.0.3 (Gama!)</li>
+            <% end %>
+            </ul>
+
+			<br><br><br><br>
 			<li>Terms of use</li>
       <br>
 			General use of the website<br>
