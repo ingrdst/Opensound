@@ -19,16 +19,33 @@
     <div class="wrapper_skinny">
 
 <h3>OpenSound Public Releases</h3>
+<h4> 1.0.0</h4>
+<ul>
+<li>Basic Implementations and Funcionalities;</li>
+<li>Welcome Page & Front-end;</li>
+<li>Authentication Settings;</li>
+<li>Dashboard & Private Content;</li>
+</ul>
+
 <h4> 1.0.1</h4>
-Basic implementations and funcionalities.
+<ul>
+<li>User, Tracks & Developer Pages;</li>
+<li>Improve App functions and Layout design;</li>
+<li>Buttons & Stylesheets </li>
+<li>Licenses & About specifications;</li>
+</ul>
 
+<% if current_sound %>
+<h3>OpenSound Private Releases (Beta!)</h3> 
 <h4> 1.0.2</h4>
-Improve App functions.
-
-<br>
+<ul>
+<li>Image & Audio multiple-format testing;</li>
+<li>Search Box & Paginate divisions;</li>
+</ul>
+<% end %>
 
 <% if current_sound && current_sound.admin %>
-<h3>OpenSound Private Releases (Beta!)</h3> 
+<h3>OpenSound Developers Releases (Omega!)</h3> 
 <table>
   <thead>
     <tr>

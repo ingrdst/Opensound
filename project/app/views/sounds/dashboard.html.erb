@@ -43,7 +43,8 @@
     <div class="wrapper_skinny">
       <ul>
 			<h2> Personal Page. </h2>
-
+        <li>User ID: <%= @sound.id %></li>
+        <li>User e-mail: <%= @sound.email %></li>
         <li><%= link_to "Audio Upload", new_sound_track_path(@sound)  %></li>
         <li><%= link_to "Edit Registration", edit_sound_registration_path %></li>
 			</ul>

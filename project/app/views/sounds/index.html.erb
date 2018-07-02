@@ -18,7 +18,7 @@
 	<div class="wrapper">
 
 			<h3> OpenSound </h3>
-			version 1.0.3 (Beta!)
+			version 1.0.2 (Beta!)
 
 			<br><br>
 			<li>Terms of use</li>
@@ -58,16 +58,13 @@
 
 
 
-			<h3> Search Tracks </h3>
+			<h3> Search Users </h3>
 
 			<%= form_tag(sounds_path, :method => "get", id: "search-form") do %>
    		 <%= text_field_tag :search, params[:search], placeholder: "Search by Tags (Eg.: Name, Genre)" %>
     	 <%= submit_tag "Search", :name => nil %>
 			<% end %>
 
-			<% if @tracks.blank? %>
-  		<h4>No tracks containing: <%= params[:search] %> .</h4>
-			<% end %>
 
 	<br>
 	<h3>Latest User Accounts Created.</h3>
@@ -75,9 +72,8 @@
 			<% @sounds.each do |sound| %>
 				<%= link_to sound do %>
 					<li>
-						<div class="sound_overview">
-							<h2><%= sound.title %></h2>
-							<p class="track_count"> Latest Created Account. </p>
+							<div class="sound_overview">
+							<h2><%= sound.email %></h2>
 						</div>
 					</li>
 				<% end %>
