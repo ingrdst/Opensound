@@ -20,8 +20,9 @@
 			<h3> OpenSound </h3>
 			version 1.0.3 (Beta!)
 
-			<li><p>Terms of use</p></li>
-      
+			<br><br>
+			<li>Terms of use</li>
+      <br>
 			General use of the website<br>
 			Use of this website and corresponding services by any user entails full acceptance 
 			of these terms and any specific conditions published on the website. Accordingly, users are recommended 
@@ -29,25 +30,38 @@
 			access the site.	By accessing the site, you agree to these terms.
 			We reserve the right to modify or delete at any time and without notice any content, services and 
 			information that are published in this website, as well as limit or modify these terms and conditions. 
-
-			<li><p>About</p></li>
+			<br><br><br>
+			<li>About</li><br>
 			Licenses<br>
-			<br>What do I need to do to legally use the files on opensound?
+			<br>What do I need to do to legally use the files on OpenSound?
+
+			Well, it depends on what you want to do and which files you want to use. First of all, 
+			OpenSound lets the user select one of three licenses for his sounds. And, we used to have a 
+			4th license, which complicates matters. Depending on the license there are things you can 
+			and can't do with the files. Let's start with the licenses. Creative commons has a really 
+			nice page explaining them:
+			<br><br>
+			<li>zero (cc0): http://creativecommons.org/publicdomain/zero/1.0/</li><br>
+			<li>attribution (by): http://creativecommons.org/licenses/by/3.0/</li><br>
+			<li>attribution noncommercial (by-nc): http://creativecommons.org/licenses/by-nc/3.0/</li>
+			<br>
+			We aren't lawyers so this isn't legal advice, but here's our summary: for the "zero" license you 
+			can do pretty much what you want with the sound. You could even sell the sound, ... but you can't 
+			claim you are the author! For "attribution" you should always mention the original creators of the 
+			sounds when you use them. "Noncommercial" works like attribution, but you can't earn any money with 
+			the piece of work you create! As with all licenses the original creator can give you permission to 
+			use the sound outside of the original license.
+			
 			<br>How do I credit/attribute?<br>
+			Eg.: This [video/theatre piece/...] uses many sounds from freesound,
+						for the full list see here: http://www.mysite.com/work-credits.html
 
-			Account<br>
-			<br>I want to reset my password! Where should I go?
-			<br>How do I delete my account?<br>
-
-			Sounds<br>
-			<br>How do I delete a sound?
-			<br>What are the sound format supported?
 
 
 			<h3> Search Tracks </h3>
 
 			<%= form_tag(sounds_path, :method => "get", id: "search-form") do %>
-   		 <%= text_field_tag :search, params[:search], placeholder: "Tracks Tags (Eg.: Name, Genre)" %>
+   		 <%= text_field_tag :search, params[:search], placeholder: "Search by Tags (Eg.: Name, Genre)" %>
     	 <%= submit_tag "Search", :name => nil %>
 			<% end %>
 
