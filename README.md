@@ -33,5 +33,7 @@ Database open-source colaborativa de sons. As interfaces são distintas para vis
 * http://localhost:3000/
 * ctrl+c (finaliza server)
 
+<br><br>
 
+Ingrid Soares ©
 
