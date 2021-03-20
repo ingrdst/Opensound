@@ -16,6 +16,13 @@ Database open-source colaborativa de sons. As interfaces são distintas para vis
 * ruby on rails 5.2.0
 * rvm/rbenv
 
+## Instalação
+### Rails no Windows (Com Subsistema Linux)
+* https://gorails.com/setup/windows/10#final-steps
+
+### Rails no Linux (Ubuntu 20.10)
+* https://gorails.com/setup/ubuntu/20.10
+
 ## Execução no Terminal
 
 * cd ~ (pasta 'home')
@@ -23,4 +30,8 @@ Database open-source colaborativa de sons. As interfaces são distintas para vis
 * bundle install (instala gems)
 * rake db:migrate (gera tabela do banco)
 * rails s (inicializa server)
+* http://localhost:3000/
 * ctrl+c (finaliza server)
+
+
+
